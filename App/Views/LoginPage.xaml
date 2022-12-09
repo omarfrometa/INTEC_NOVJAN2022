@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="30">
+
+            <StackLayout VerticalOptions="Start">
+                
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Image Source="intec_logo" HeightRequest="100"/>
+
+                <Label FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" Text="Bienvenido a INTEC Mobile"/>
+                <Label HorizontalTextAlignment="Center" Text="Desarrollo Applicaciones Mov."/>
+
+                <StackLayout Padding="5" Margin="0,25">
+                    <Label Text="Usuario:" FontAttributes="Bold"/>
+                    <Entry Placeholder="Ej: 1305654" PlaceholderColor="#d4d4d4" Keyboard="Numeric" Text="{Binding User}" />
+                </StackLayout>
+
+                <StackLayout Padding="5">
+                    <Label Text="Contraseña:" FontAttributes="Bold"/>
+                    <Entry Placeholder="*******" PlaceholderColor="#d4d4d4" Text="{Binding Password}"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Label Text="Recordar Credenciales"></Label>
+                    <Switch IsToggled="{Binding RememberMe}" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Acceder al Sistema" BackgroundColor="Red" Command="{Binding LoginCommand}" ></Button>
+                    <Button Text="Cancelar" BackgroundColor="#999" Command="{Binding CancelCommand}"></Button>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="End">
+
+                <Label Text="2022 INTEC - Todos los derechos reservados" FontAttributes="Bold" FontSize="16" HorizontalTextAlignment="Center" TextColor="#999">
+                </Label>
+
+                <Label Text="Desarrollo de Aplicaciones Moviles" FontSize="14" HorizontalTextAlignment="Center" TextColor="#999">
+                </Label>
+
+                <Label Text="Nov - Ene 2022, 2023" FontSize="12" HorizontalTextAlignment="Center" TextColor="Red">
+                </Label>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
